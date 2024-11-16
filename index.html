@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Screenshot Generator</title>
+    <!-- Default theme (Prism) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" id="prism-theme">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Code Screenshot Generator</h1>
+        
+        <!-- Dropdown for selecting theme -->
+        <label for="theme-selector">Select Theme:</label>
+        <select id="theme-selector">
+            <option value="default">Default</option>
+            <option value="okaidia">Okaidia</option>
+            <option value="dracula">Dracula</option>
+            <option value="tomorrow-night">Tomorrow Night</option>
+            <option value="solarized-dark">Solarized Dark</option>
+            <option value="solarized-light">Solarized Light</option>
+            <option value="atom-dark">Atom Dark</option>
+            <option value="material-dark">Material Dark</option>
+            <option value="vs-dark">VS Dark</option>
+            <option value="shades-of-purple">Shades of Purple</option>
+            <option value="one-dark">One Dark</option>
+            <option value="night-owl">Night Owl</option>
+        </select>
+        
+        <!-- Configurable Inputs -->
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Enter title">
+        
+        <label for="language">Language:</label>
+        <select id="language">
+            <option value="language-python">Python</option>
+            <option value="language-html">HTML</option>
+            <option value="language-css">CSS</option>
+            <option value="language-javascript">JavaScript</option>
+        </select>
+        
+        <label for="code">Code:</label>
+        <textarea id="code" rows="10" placeholder="Paste your code here..."></textarea>
+        
+        <button id="generateBtn">Generate Screenshot</button>
+        
+        <!-- Preview Section -->
+        <div id="preview" class="theme-default">
+            <h2 id="preview-title"></h2>
+            <pre><code id="preview-code" class="language-python"></code></pre>
+        </div>
+    </div>
+
+    <!-- Include Prism.js and html2canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
