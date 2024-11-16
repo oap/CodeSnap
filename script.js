@@ -51,10 +51,12 @@ async function generateScreenshot() {
     const previewDiv = document.getElementById('preview');
     try {
         const canvas = await html2canvas(previewDiv, { scale: 2 });
-        const link = document.createElement('a');
-        link.href = canvas.toDataURL('image/png');
-        link.download = 'code-screenshot.png';
-        link.click();
+        const img = document.createElement('img');
+        img.src = canvas.toDataURL('image/png');
+        img.alt = 'Code Screenshot Preview';
+        const previewContainer = document.getElementById('screenshot-preview');
+        previewContainer.innerHTML = ''; // Clear previous preview
+        previewContainer.appendChild(img);
     } catch (error) {
         console.error('Screenshot generation failed:', error);
     }

@@ -64,3 +64,17 @@ code {
     white-space: pre-wrap !important;
     word-wrap: break-word !important;
 }
+
+
+#screenshot-preview {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#screenshot-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
